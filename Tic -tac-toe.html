@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Tic-Tac-Toe</title>
+		<style type="text/css">
+			#b11 {position:absolute; top:250px; left:620px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b12 {position:absolute; top:250px; left:680px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b13 {position:absolute; top:250px; left:740px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b21 {position:absolute; top:310px; left:620px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b22 {position:absolute; top:310px; left:680px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b23 {position:absolute; top:310px; left:740px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b31 {position:absolute; top:370px; left:620px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b32 {position:absolute; top:370px; left:680px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+			#b33 {position:absolute; top:370px; left:740px; height:50px; width:50px; font-family:helvetica; font-size:25px; color:#666666; font-weight:bold; border-radius:10px;}
+		</style>
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+			function game(box)
+			{
+				var f=" ";
+				var flag=0;
+				if(ttt.b11.value==" ")
+				flag++;
+				if(ttt.b12.value==" ")
+				flag++;
+				if(ttt.b13.value==" ")
+				flag++;
+				if(ttt.b21.value==" ")
+				flag++;
+				if(ttt.b22.value==" ")
+				flag++;
+				if(ttt.b23.value==" ")
+				flag++;
+				if(ttt.b31.value==" ")
+				flag++;
+				if(ttt.b32.value==" ")
+				flag++;
+				if(ttt.b33.value==" ")
+				flag++;
+				
+				var cross="X";
+				var zero="O";
+				if(flag%2==1)
+				f=cross;
+				else
+				f=zero;
+				switch (box)
+				{
+				case "11":if(ttt.b11.value=="O"||ttt.b11.value=="X"){ttt.b11.value=" ";}else ttt.b11.value=f;
+					break;
+				case "12":if(ttt.b12.value=="O"||ttt.b12.value=="X"){ttt.b12.value=" ";}else ttt.b12.value=f;
+					break;
+				case "13":if(ttt.b13.value=="O"||ttt.b13.value=="X"){ttt.b13.value=" ";}else ttt.b13.value=f;
+					break;
+				case "21":if(ttt.b21.value=="O"||ttt.b21.value=="X"){ttt.b21.value=" ";}else ttt.b21.value=f;
+					break;
+				case "22":if(ttt.b22.value=="O"||ttt.b22.value=="X"){ttt.b22.value=" ";}else ttt.b22.value=f;
+					break;
+				case "23":if(ttt.b23.value=="O"||ttt.b23.value=="X"){ttt.b23.value=" ";}else ttt.b23.value=f;
+					break;
+				case "31":if(ttt.b31.value=="O"||ttt.b31.value=="X"){ttt.b31.value=" ";}else ttt.b31.value=f;
+					break;
+				case "32":if(ttt.b32.value=="O"||ttt.b32.value=="X"){ttt.b32.value=" ";}else ttt.b32.value=f;
+					break;
+				case "33":if(ttt.b33.value=="O"||ttt.b33.value=="X"){ttt.b33.value=" ";}else ttt.b33.value=f;
+					break;
+				default: flag=0;
+				}
+				
+				if((ttt.b11.value=="X"&&ttt.b12.value=="X"&&ttt.b13.value=="X")||(ttt.b21.value=="X"&&ttt.b22.value=="X"&&ttt.b23.value=="X")||(ttt.b31.value=="X"&&ttt.b32.value=="X"&&ttt.b33.value=="X")||(ttt.b11.value=="X"&&ttt.b21.value=="X"&&ttt.b31.value=="X")||(ttt.b21.value=="X"&&ttt.b22.value=="X"&&ttt.b32.value=="X")||(ttt.b13.value=="X"&&ttt.b23.value=="X"&&ttt.b33.value=="X")||(ttt.b13.value=="X"&&ttt.b22.value=="X"&&ttt.b31.value=="X")||(ttt.b11.value=="X"&&ttt.b22.value=="X"&&ttt.b33.value=="X"))
+				{
+				alert("X wins");
+				}
+				
+				else if((ttt.b11.value=="O"&&ttt.b12.value=="O"&&ttt.b13.value=="O")||(ttt.b21.value=="O"&&ttt.b22.value=="O"&&ttt.b23.value=="O")||(ttt.b31.value=="O"&&ttt.b32.value=="O"&&ttt.b33.value=="O")||(ttt.b11.value=="O"&&ttt.b21.value=="O"&&ttt.b31.value=="O")||(ttt.b21.value=="O"&&ttt.b22.value=="O"&&ttt.b32.value=="O")||(ttt.b13.value=="O"&&ttt.b23.value=="O"&&ttt.b33.value=="O")||(ttt.b13.value=="O"&&ttt.b22.value=="O"&&ttt.b31.value=="O")||(ttt.b11.value=="O"&&ttt.b22.value=="O"&&ttt.b33.value=="O"))
+				{
+				alert("O wins");
+				}
+				
+				else if(ttt.b11.value!=" "&&ttt.b12.value!=" "&&ttt.b13.value!=" "&&ttt.b21.value!=" "&&ttt.b22.value!=" "&&ttt.b23.value!=" "&&ttt.b31.value!=" "&&ttt.b32.value!=" "&&ttt.b33.value!=" ")
+				{
+				alert("Draw!!");
+				}
+				else{}
+			}
+		</script>
+		
+			<form name="ttt">
+				<input id="b11" type="button" name="b11" value=" " onClick="game('11')"/>
+				<input id="b12" type="button" name="b12" value=" " onClick="game('12')"/>
+				<input id="b13" type="button" name="b13" value=" " onClick="game('13')"/>
+				<input id="b21" type="button" name="b21" value=" " onClick="game('21')"/>
+				<input id="b22" type="button" name="b22" value=" " onClick="game('22')"/>
+				<input id="b23" type="button" name="b23" value=" " onClick="game('23')"/>
+				<input id="b31" type="button" name="b31" value=" " onClick="game('31')"/>
+				<input id="b32" type="button" name="b32" value=" " onClick="game('32')"/>
+				<input id="b33" type="button" name="b33" value=" " onClick="game('33')"/>
+			</form>
+	</body>
+</html>
